@@ -75,6 +75,9 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -122,3 +125,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# test email method
+# myaccount.google.com/lesssecureapps
+# accounts.google.com/DisplayUnlockCaptcha
+# myaccount.google.com/apppasswords
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'johan.bh19@gmail.com'
+EMAIL_HOST_PASSWORD = '******'
+EMAIL_USE_TLS = True
+
+
