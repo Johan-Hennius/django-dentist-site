@@ -102,32 +102,19 @@
     			</div>
     			<div class="col-md-6 color-3 p-4">
     				<h3 class="mb-2">Make an Appointment</h3>
-    				<form action="#" class="appointment-form">
+    				<form action="{% url 'website-appointment-page' %}" class="appointment-form">
+              {% csrf_token %}
 	            <div class="row">
-	            	<div class="col-sm-4">
-	                <div class="form-group">
-			              <div class="select-wrap">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                      	<option value="">Department</option>
-                        <option value="">Teeth Whitening</option>
-                        <option value="">Teeth CLeaning</option>
-                        <option value="">Quality Brackets</option>
-                        <option value="">Modern Anesthetic</option>
-                      </select>
-                    </div>
-			            </div>
-	              </div>
 	              <div class="col-sm-4">
 	                <div class="form-group">
 	                	<div class="icon"><span class="icon-user"></span></div>
-			              <input type="text" class="form-control" id="appointment_name" placeholder="Name">
+			              <input type="text" class="form-control" id="appointment_name" placeholder="Name" name="appointment-name">
 			            </div>
 	              </div>
 	              <div class="col-sm-4">
 	                <div class="form-group">
 	                	<div class="icon"><span class="icon-paper-plane"></span></div>
-			              <input type="text" class="form-control" id="appointment_email" placeholder="Email">
+			              <input type="email" class="form-control" id="appointment_email" placeholder="Email" name="appointment-email">
 			            </div>
 	              </div>
 	            </div>
@@ -135,19 +122,19 @@
 	              <div class="col-sm-4">
 	                <div class="form-group">
 	                	<div class="icon"><span class="ion-ios-calendar"></span></div>
-	                  <input type="text" class="form-control appointment_date" placeholder="Date">
+	                  <input type="date" class="form-control appointment_date" placeholder="Date" name="appointment-date">
 	                </div>    
 	              </div>
 	              <div class="col-sm-4">
 	                <div class="form-group">
 	                	<div class="icon"><span class="ion-ios-clock"></span></div>
-	                  <input type="text" class="form-control appointment_time" placeholder="Time">
+	                  <input type="time" class="form-control appointment_time" placeholder="Time" name="appointment-time">
 	                </div>
 	              </div>
 	              <div class="col-sm-4">
 	                <div class="form-group">
 	                	<div class="icon"><span class="icon-phone2"></span></div>
-	                  <input type="text" class="form-control" id="phone" placeholder="Phone">
+	                  <input type="tel" class="form-control" id="phone" placeholder="Phone" name="appointment-phone">
 	                </div>
 	              </div>
 	            </div>
